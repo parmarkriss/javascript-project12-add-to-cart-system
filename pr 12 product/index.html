@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en"git >
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin panel</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./all.min.css">
+
+<body>
+  <header class="position-sticky top-0 z-index">
+    <nav class="navbar navbar-expand-lg navbar-light bg-darkblue">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="col-4 d-flex align-items-center nav-text ">
+            <a href="#" class="border-end ps-3 border-primary"><i class="bi bi-list text-light fs-4 pe-3"></i></a>
+
+            <a class="navbar-brand text-white px-3 fs-2" href="#">ngx-admin</a>
+
+            <select class="selected border border-2 rounded-2 border-primary btn-darkblue text-light p-1">
+              <option class="text-light">Material Dark</option>
+              <option class="text-light">Light</option>
+              <option class="text-light">Cosmic</option>
+              <option class="text-light">Corporate</option>
+              <option class="text-light">Material Light</option>
+              <option class="text-light">Material dark</option>
+            </select>
+          </div>
+
+          <div class="col-8 d-flex justify-content-end align-items-center">
+            <ul class="navbar-nav d-flex align-items-center">
+              <li class="nav-item"><a class="nav-link active text-white" href="#">Support us:</a></li>
+              <li> <button class="btn bg-white p-0 px-2"><i class="bi bi-github"></i>star</button></li>
+              <li class="pe-3"> <button class="btn bg-white p-0 px-1 ms-2">24,374</button></li>
+              <li class="text-white px-3 border-left"><i class="bi bi-download text-white pe-3"></i>470.000</li>
+              <li class="px-3 border-left"> <button class="btn text-white-50 text-uppercase p-0 px-1 ms-1"><i
+                    class="bi bi-envelope px-1"></i> contact@akveo.com </button></li>
+              <li class="text-white px-3 border-left"><i class="bi bi-search"></i></li>
+              <li class="text-white px-3 border-left"><i class="bi bi-envelope px-1"></i></li>
+              <li class="text-white px-3 border-left"><i class="bi bi-bell-fill"></i></li>
+              <li class="text-white px-3 border-left"><img src="../img/nick.webp" class="rounded-circle me-1" width="40"
+                  alt="">
+                Nick Jones </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-2 p-0">
+          <div class="scrollbar bg-black">
+            <ul class="p-0">
+              <li class="ps-3  py-3 ps-4 border1"><a href="#" class="text-white"><i
+                    class="fa-solid fa-gauge me-2 fs-4"></i>dashboard</a></li>
+              <li class="ps-3  py-3 ps-4 border1"><a href="cart.html" class="text-white"><i
+                    class="fa-solid fa-cart-shopping fs-4 me-2"></i>Product</a></li>
+            </ul>
+
+          </div>
+        </div>
+
+
+        <div class="col-10 p-3">
+         <div class="container">
+          <h1 class="text-light text-center">FASHION SHOPPING</h1>
+          <div class="row mt-4 " id="productdata"></div>
+         </div>
+
+          <footer class="mt-4 d-flex justify-content-between align-items-center">
+            <span class="text-light">Created with ♥ by <a href="#" class="text-decoration-underline">Akveo</a> 2019.
+              Made with <a href="#" class="text-decoration-underline">Nebular.</a></span>
+            <div class="icons">
+              <a href="#" class="text-color">
+                <i class="fa-brands fa-github fs-2"></i>
+              </a>
+              <a href="#" class="text-color px-1">
+                <i class="fa-brands fa-facebook-f fs-3"></i>
+              </a>
+              <a href="#" class="text-color px-1">
+                <i class="fa-brands fa-twitter fs-3"></i>
+              </a>
+              <a href="#" class="text-color">
+                <i class="fa-brands fa-linkedin fs-3"></i>
+              </a>
+            </div>
+          </footer>
+        </div>
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+          integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+          crossorigin="anonymous"></script>
+        <script src="./all.min.js"></script>
+
+        <script type="text/javascript">
+
+          let product = [
+            {
+              productid: 1,
+              name: 'girls hoodie',
+              qty: 1,
+              price: 500,
+              desc: 'i love hoodie',
+              image: 'img/397378-0054_1-400x533.jpg'
+            },
+            {
+              productid: 2,
+              name: 'Man t-shirt',
+              qty: 1,
+              price: 350,
+              desc: 'i love t-shirt',
+              image: 'img/724329-6980_1-400x533.jpg'
+            },
+            {
+              productid: 3,
+              name: 'Luxurius dress for women',
+              qty: 1,
+              price: 750,
+              desc: 'i love Luxurius trendy dress',
+              image: 'img/350973-5843_1-400x533.jpg'
+            },
+            {
+              productid: 4,
+              name: 'Man suit',
+              qty: 1,
+              price: 1500,
+              desc: 'i love suit',
+              image: 'img/016931-0081_1-400x533.jpg'
+            },
+            {
+              productid: 5,
+              name: 'Lineal louse cotton tops',
+              qty: 1,
+              price: 999,
+              desc: 'i love cotton tops',
+              image: 'img/7.1-312x360.webp'
+            },
+            {
+              productid: 6,
+              name: 'Man blazzer',
+              qty: 1,
+              price: 600,
+              desc: 'i love blazzer',
+              image: 'img/10-5-312x360.webp'
+            },
+            {
+              productid: 7,
+              name: 'Girl dress',
+              qty: 1,
+              price: 2000,
+              desc: 'i love dress',
+              image: 'img/girls dress.jpg'
+            },
+            {
+              productid: 8,
+              name: 'Man combo',
+              qty: 1,
+              price: 2500,
+              desc: 'i love combo',
+              image: 'img/015830-0014_1-400x533.jpg'
+            }
+          ];
+
+          const viewProduct = () => {
+            let tbl = "";
+            product.map((val) => {
+              tbl += `
+                <div class="card ms-3 mt-4" style="width: 18rem;">
+                <img src="${val.image}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">${val.name}</h5>
+                  <p class="card-text">${val.desc}</p>
+                  <h5 class="card-title">${val.price}</h5>
+                  <a onclick="addcart(${val.productid})" class="btn btn-primary" >Add to cart</a>
+                </div>
+              </div>
+                        `
+            })
+            document.getElementById('productdata').innerHTML = tbl;
+          }
+          viewProduct();
+
+          let cartdata = [];
+          const addcart = (id) =>{
+             product.filter((val)=>{
+                if(val.productid == id){
+                  if(localStorage.getItem('cart') === null || localStorage.getItem('cart') === undefined){
+                      cartdata.push(val);
+                      localStorage.setItem('cart',JSON.stringify(cartdata)) 
+                  }else{
+                     let allCartData = JSON.parse(localStorage.getItem('cart'));
+                     allCartData.push(val);
+                     localStorage.setItem('cart',JSON.stringify(allCartData));
+                  }
+                }
+             });
+             alert("product successfully add...");
+          }
+          
+        </script>
+
+</body>
+
+</html>
