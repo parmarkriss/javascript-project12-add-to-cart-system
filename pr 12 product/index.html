@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"git >
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -181,7 +181,9 @@
             product.map((val) => {
               tbl += `
                 <div class="card ms-3 mt-4" style="width: 18rem;">
+                  <div class="card-img">
                 <img src="${val.image}" class="card-img-top" alt="...">
+                </div>
                 <div class="card-body">
                   <h5 class="card-title">${val.name}</h5>
                   <p class="card-text">${val.desc}</p>
@@ -196,8 +198,16 @@
           viewProduct();
 
           let cartdata = [];
+
           const addcart = (id) =>{
-             product.filter((val)=>{
+            let ans = JSON.parse(localStorage.getItem('cart')) || [];
+            let cartid = ans.find((v)=>{
+              return v.productid == id
+            })
+             if(cartid){
+                alert("product is already exist");
+             }else{
+              product.filter((val)=>{
                 if(val.productid == id){
                   if(localStorage.getItem('cart') === null || localStorage.getItem('cart') === undefined){
                       cartdata.push(val);
@@ -210,6 +220,7 @@
                 }
              });
              alert("product successfully add...");
+             }
           }
           
         </script>
